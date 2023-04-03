@@ -27,5 +27,5 @@ public class Brand {
     @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Model> models = new ArrayList<>();
 
-    public Brand(String name, long id) {this.name = name;}
+    public Brand(String name) {this.name = name;}
 }
