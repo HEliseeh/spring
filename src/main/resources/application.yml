@@ -1,0 +1,15 @@
+application:
+
+    hello: "Hello World!"
+
+spring:
+    profiles:
+        active:
+        - dev
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost/carshop
+        username: carshop
+        password: secret
+    liquibase:
+        contexts: dev, faker

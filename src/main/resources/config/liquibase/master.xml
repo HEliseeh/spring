@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql, mariadb"/>
+    <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
+
+    <include file="changelog/01-Brand.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/02-Model.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/03-Car.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/05-Feature.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/04-CarFeature.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/07-Engine.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/06-CarEngine.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/09-Customer.xml"  relativeToChangelogFile="true" />
+    <include file="changelog/08-Sale.xml"  relativeToChangelogFile="true" />
+</databaseChangeLog>
