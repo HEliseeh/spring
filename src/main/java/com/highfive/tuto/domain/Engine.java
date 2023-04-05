@@ -1,7 +1,7 @@
 package com.highfive.tuto.domain;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,27 +9,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="model")
+@Table(name = "engine")
 @Getter
 @Setter
 @NoArgsConstructor
 
-public class Model {
-    
+
+public class Engine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name")
+    @Column(name="name")
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="brand")
-    private Brand brand;
+    @Column(name = "type")
+    private String type;
 
-    @OneToMany(mappedBy = "model")
+    @ManyToMany
+    @JoinTable(
+        name = "carEngine",
+        joinColumns = @JoinColumn(name = "engime"),
+        inverseJoinColumns = @JoinColumn(name = "car")
+    )
     private List<Car> cars = new ArrayList<>();
-    public Model(String name) {
-        this.name = name;
-    }
+    
 }
