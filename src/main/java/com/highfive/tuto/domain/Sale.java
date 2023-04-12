@@ -1,8 +1,7 @@
 package com.highfive.tuto.domain;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -20,7 +19,7 @@ public class Sale {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "price")
     private BigInteger price;

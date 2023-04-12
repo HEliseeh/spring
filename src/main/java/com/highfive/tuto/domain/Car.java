@@ -23,12 +23,12 @@ import lombok.Setter;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name= "price")
     private BigInteger price;
 
-    @ManyToMany
+    @ManyToMany 
     @JoinTable(
         name = "carEngine",
         joinColumns = @JoinColumn(name = "car"),
@@ -51,6 +51,7 @@ public class Car {
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Sale> sales = new ArrayList<>();
+    
     
 
 }

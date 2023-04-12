@@ -18,7 +18,7 @@ import lombok.Setter;
 public class Engine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name="name")
     private String name;
