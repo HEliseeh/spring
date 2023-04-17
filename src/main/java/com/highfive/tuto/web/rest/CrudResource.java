@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.highfive.tuto.Service.CrudService;
 
-@RestController
-@RequestMapping("/crud")
+
 public abstract class CrudResource<T, ID> {
     
     private final CrudService<T, ID> crudService;
