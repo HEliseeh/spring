@@ -2,6 +2,7 @@ package com.highfive.tuto.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.highfive.tuto.domain.enums.EngineType;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,7 +25,8 @@ public class Engine {
     private String name;
 
     @Column(name = "type")
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private EngineType type;
 
     @ManyToMany
     @JoinTable(

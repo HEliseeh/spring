@@ -9,6 +9,6 @@ public interface ModelRepository extends JpaRepository<Model, Long> {
 
     boolean existsByNameAndBrand(String Name, Brand brand);
 
-    Optional<Model> findByNameByBrand(String Name, Brand brand);
+    Optional<Model> findByNameAndBrand(String Name, Brand brand);
     
 }

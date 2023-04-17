@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
-
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,7 +25,7 @@ public class Car {
     private Long id;
 
     @Column(name= "price")
-    private BigInteger price;
+    private BigDecimal price;
 
     @ManyToMany 
     @JoinTable(

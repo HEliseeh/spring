@@ -3,7 +3,7 @@ package com.highfive.tuto.Service;
 
 import com.highfive.tuto.Repository.BrandRepository;
 import com.highfive.tuto.domain.Brand;
-import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 public  class BrandService extends CrudService<Brand, Long> {

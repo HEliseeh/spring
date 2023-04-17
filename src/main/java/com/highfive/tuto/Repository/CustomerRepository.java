@@ -9,10 +9,11 @@ import com.highfive.tuto.domain.Customer;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     
 
-    Optional<Customer> findByName(String Name);
+    boolean existsByPhone(String phone);
+    
+    Optional<Customer> findByName(String name);
 
     Optional<Customer> findByAddress(String address);
-
     Optional<Customer> findByPhone(String phone);
 
 }
