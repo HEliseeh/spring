@@ -2,10 +2,12 @@ package com.highfive.tuto.Service;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 import com.highfive.tuto.Repository.EngineRepository;
 import com.highfive.tuto.domain.Engine;
 
+@Service
 public class EngineService extends CrudService<Engine, Long>{
     
     private final EngineRepository engineRepository;

@@ -1,10 +1,11 @@
 package com.highfive.tuto.Service;
 
-
+import org.springframework.stereotype.Service;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public abstract class CrudService<T, ID> {
     private final JpaRepository<T, ID> repository;
 

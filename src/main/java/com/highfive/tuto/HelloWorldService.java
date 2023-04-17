@@ -51,7 +51,8 @@ public class HelloWorldService {
 
     
     @Transactional
-    public void test() {
+    public void test()
+     {
         // insert Model
         Model bmwModel = new Model();
         bmwModel.setName("IX");
@@ -72,6 +73,6 @@ public class HelloWorldService {
         bmwCar.getEngines().add(bmwEngine);
         carService.create(bmwCar);
 
-        printCars();
+        // printCars();
     }
 }

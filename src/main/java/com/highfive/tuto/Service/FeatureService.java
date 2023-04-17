@@ -1,11 +1,12 @@
 package com.highfive.tuto.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.highfive.tuto.Repository.FeatureRepository;
 import com.highfive.tuto.domain.Feature;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FeatureService extends CrudService<Feature, Long>{
 
     private final FeatureRepository featureRepository;

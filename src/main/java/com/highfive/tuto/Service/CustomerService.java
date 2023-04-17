@@ -2,10 +2,12 @@ package com.highfive.tuto.Service;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 import com.highfive.tuto.Repository.CustomerRepository;
 import com.highfive.tuto.domain.Customer;
 
+@Service
 public class CustomerService extends CrudService<Customer, Long>{
     
     private final CustomerRepository customerRepository;

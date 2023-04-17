@@ -6,6 +6,9 @@ import com.highfive.tuto.domain.Brand;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public  class BrandService extends CrudService<Brand, Long> {
 
     private final BrandRepository brandRepository;
